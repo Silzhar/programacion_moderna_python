@@ -3,7 +3,6 @@ def validacion(mensaje):
     # bloque de entrada
     numero = input( mensaje) 
     
-
     isvalid = False
     while not isvalid:
         if numero.isdigit():

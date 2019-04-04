@@ -10,6 +10,7 @@ print( " Número de items : ",len(notas) )
 print( " Nota media      : ",media)
 print( " nota total      : ",suma )
 
+print("    ")
 # optimizando mas lo anterior :
 notas = ( 2, 4, 6, 8 )
 

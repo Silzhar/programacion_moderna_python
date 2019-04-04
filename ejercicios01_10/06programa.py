@@ -1,56 +1,55 @@
-mes01 = 31
-mes02 = 28
-mes03 = 31
-mes04 = 30
-mes05 = 31
-mes06 = 30
-mes07 = 31
-mes08 = 31
-mes09 = 30
-mes10 = 31
-mes11 = 30
 
-nombre = input("Nombre : " )
-print( "hola ",nombre)
+enero = 31
+febrero = 28
+marzo = 31
+abril = 30
+mayo = 31
+junio = 31
+julio = 30
+agosto = 31
+septiembre = 30
+octubre = 31
+noviembre = 30
+diciembre = 31
 
-edad = int(input("¿Cuantos años tienes? "))
-year = int(input("¿Año actual? " ))
-mes = int(input("¿En que mes estamos? "))
-dia = int(input("¿En que dia estamos? "))
+totalDias = 0
 
-transcurridos = 0
+nombre = input("Nombre : ")
+print(" Hola ",nombre)
 
-if mes > 1:
-    transcurridos = transcurridos + mes01
-if mes > 2:
-    transcurridos = transcurridos + mes02 
-if mes > 3: 
-    transcurridos = transcurridos + mes03
-if mes > 4:
-    transcurridos = transcurridos + mes04
-if mes > 5:
-    transcurridos = transcurridos + mes04
-if mes > 6:
-    transcurridos = transcurridos + mes05
-if mes > 7:
-    transcurridos = transcurridos + mes06
-if mes > 8:
-    transcurridos = transcurridos + mes07
-if mes > 9:
-    transcurridos = transcurridos + mes08
-if mes > 10:
-    transcurridos = transcurridos + mes09
-if mes > 11:
-    transcurridos = transcurridos + mes10
-else:
-    transcurridos = transcurridos + mes11
+edad = int(input("¿cuantos años tienes? "))
+fecha = int(input("Año actual : "))
+mes = int(input("Mes actual : "))
+dia = int(input("Día actual : "))
 
-transcurridos = transcurridos + dia
+if mes==1 :
+    totalDias =  dia
+elif mes == 2 :
+    totalDias = dia + enero
+elif mes == 3 :
+    totalDias = dia + febrero
+elif mes == 4 :
+    totalDias = dia + marzo
+elif mes == 5 :
+    totalDias = dia + abril
+elif mes == 6 :
+    totalDias = dia + mayo
+elif mes == 7 :
+    totalDias = dia + junio
+elif mes == 8 :
+    totalDias = dia + julio
+elif mes == 9 :
+    totalDias = dia + agosto
+elif mes == 10 :
+    totalDias = dia + septiembre
+elif mes == 11 :
+    totalDias = dia + octubre
+elif mes == 12 :
+    totalDias = dia + noviembre
 
-prob = transcurridos / 365 * 100
+nacimiento = fecha - edad
+prob = totalDias / 365 * 100
 
-nacimiento = year - edad
-
-print( "Naciste en ",nacimiento," con una probabilidad de ",prob )
-print( " O en ",nacimiento -1," con una probabilidad de ",100-prob )
+print(nombre, ", has nacido en el año ",nacimiento, " con una probabilidad de ",round(prob, 2))
+print("O en el año ",nacimiento - 1, " con una probabilidad de ",round((100 - prob), 2))
 

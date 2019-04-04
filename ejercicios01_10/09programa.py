@@ -18,7 +18,7 @@ while not isvalidn1:
 isvalidn2 = False
 while not isvalidn2:
     if numero2.isdigit():
-        numero2 = int(numero1)
+        numero2 = int(numero2)
         isvalidn2 = True
     elif numero2 != '' and numero2[0] == '-' and numero2[1:].isdigit():
         numero2 = int(numero2)
@@ -26,7 +26,8 @@ while not isvalidn2:
     else:
         print( numero2," Debe ser un entero" )
         quit()
-    
+# [1:].isdigit // 1 representa la posicion en la cadena  // : desde el indice (en este caso 1) hasta...
+#  isdigit para saber si una cadena es numerica, retorna True o False
 
 # bloque de procesos
 numero1 = int(numero1) / 10
@@ -38,8 +39,8 @@ producto = numero1 * numero2
 division = numero1 / numero2
 
 # bloque de salida de datos
-print(" La suma de los valores es :" ,suma )
+print(" La suma de los valores es :" ,round(suma, 2))
 print( " La resta de los valores es :",round(resta, 2) )
-print( " El producto de los valores es :",producto )
+print( " El producto de los valores es :",round(producto, 2) )
 print( " La división de los valores es :",round( division, 2) )
 
