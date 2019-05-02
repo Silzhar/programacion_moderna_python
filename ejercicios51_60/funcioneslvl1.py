@@ -16,7 +16,7 @@ def sumaCuadrado(limit):
 
 print(sumaCuadrado(3))
 #########################################################
-def normal(i):
+def normal(i):  # equivale a normal = lambda x: x
     return i
 
 def cuadrado(x):
@@ -28,5 +28,7 @@ def sumaTodos(limit, f):
         resultado += f(i)
     return resultado
 
-print(sumaTodos(100, normal))
-print(sumaTodos(3, cuadrado))
+if __name__ == '__main__': # poner doble gion bajo siempre _1  __2
+    print(sumaTodos(100, normal))
+    print(sumaTodos(3, cuadrado))
+
