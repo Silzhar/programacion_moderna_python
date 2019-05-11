@@ -12,11 +12,11 @@ class Termometro():                  # clase // instancia // constructor
             return "unidad incorrecta"
        
     def __str__(self):
-        return "{}º {}".format(self.__temperatura, self.__unidadM)
+        return "{}º {}".format(self.__temperatura, self.__unidadM) # __ guines hacen privado
         
     def unidadMedida(self, uniM=None):
         if uniM == None:
-            return self.__unidadM
+            return self.__unidadM #__guion bajo lo hace privado !!
         else:
             if uniM == 'F' or uniM == 'C':
                 self.__unidadM = uniM
