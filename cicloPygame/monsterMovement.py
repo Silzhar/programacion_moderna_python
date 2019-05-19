@@ -33,13 +33,13 @@ class Game():
                         sys.exit()
                     elif event.type == KEYDOWN:
                         if event.key == K_UP: # mover arriba runner
-                            self.runner.position[1] -= 5
+                            self.runner.position[1] -= 10
                         elif event.key == K_DOWN: # mover abajo runner
-                            self.runner.position[1] += 5
+                            self.runner.position[1] += 10
                         elif event.key == K_LEFT: # mover izquierda runner
-                            self.runner.position[0] -= 5
+                            self.runner.position[0] -= 10
                         elif event.key == K_RIGHT: # mover derecha runner
-                            self.runner.position[0] += 5
+                            self.runner.position[0] += 10
                         else:
                             pass
                    
