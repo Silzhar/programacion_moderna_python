@@ -9,7 +9,7 @@ class Termometro():
         resultado = 0 
         if toUnidad == 'F':
             resultado = grados * 9/5 + 32
-        elif toUnidad == ' C':
+        elif toUnidad == 'C':
             resultado = (grados - 32) * 5/9
         else:
             resultado = grados
@@ -43,7 +43,7 @@ class Selector():
         return self.__tipoUnidad  
         
                          
-class NumberInput():
+class NumberInput():  #  "__atributos privados "
     __value = 0
     __strValue = ""  # para pasar valor a cadena y renderizar
     __position = [0, 0]
@@ -98,7 +98,7 @@ class NumberInput():
         else:
             val = str(val)
             try:
-                self.__value = int(val)
+                self.__value = float(val)
                 self.__strValue = val
                 if '.' in self.__strValue:
                     self.__pointsCount = 1
@@ -192,11 +192,7 @@ class mainApp():
                     self.__on_close()
                     
                 self.entrada.on_event(event)
-                '''  entradas con mismo resultado 
-                if event.type == KEYDOWN:
-                    if event.unicode in '01234567890:
-                    if event.isdigit()
-                    if event.unicode =='1' or event.unicode == '2'   '''
+                
                 
                 if event.type == pygame.MOUSEBUTTONDOWN:
                     self.selector.change()
